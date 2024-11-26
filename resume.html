@@ -123,6 +123,58 @@
             font-size: 16px;
             line-height: 1.6;
         }
+        .experience-card .company-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .experience-card .company-info .circle {
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .experience-card .company-info img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
+
+        .experience-card .company-info span {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        /* Experience items and their lines */
+        .experience-card .experience-items {
+            position: relative;
+            padding-left: 30px; /* Increase space to the right of the dot */
+            margin-bottom: 15px;
+        }
+
+        .experience-card .experience-item {
+            position: relative;
+            margin-bottom: 15px;
+            padding-left: 15px; /* Add more spacing between dot and title */
+        }
+
+        /* Dot position */
+        .experience-card .experience-item:before {
+            content: '';
+            position: absolute;
+            left: -10px; /* Increase space between dot and text */
+            top: 7px;
+            width: 8px;
+            height: 8px;
+            background-color: #000;
+            border-radius: 50%;
+        }
 
         /* Media Queries for Responsiveness */
         @media (max-width: 900px) {
@@ -178,11 +230,31 @@
         <!-- Experience Card -->
         <div class="experience-card">
             <h3>Experience</h3>
-            <p><strong>Job Title 1</strong><br>Company Name - Year</p>
-            <p>Brief description of the responsibilities and accomplishments in this position.</p>
+            <div class="company-info">
+                <div class="circle">
+                    <img src="https://assets.nsd.co.id/images/kampus/logo/UIN_Antasari_2edit22.png" alt="UIN Antasari Logo">
+                </div>
+                <span>Universitas Islam Negeri Antasari</span>
+            </div>
 
-            <p><strong>Job Title 2</strong><br>Company Name - Year</p>
-            <p>Brief description of the responsibilities and accomplishments in this position.</p>
+            <!-- Experience items with dots only (no lines) -->
+            <div class="experience-items">
+                <div class="experience-item">
+                    <p><strong>Presenter Borneo Undergraduate Academic Forum ke-8</strong><br>17 September - 19 September 2024</p>
+                    <p>Universitas Islam Negeri Sultan Aji Muhammad Idris
+                        Kota Samarinda, Kalimantan Timur</p>
+                </div>
+
+                <div class="experience-item">
+                    <p><strong>Pemateri Pengabdian Masyarakat di Loksado</strong><br>07 August - 08 August 2024</p>
+                    <p>Loksado, Kalimantan Selatan</p>
+                </div>
+
+                <div class="experience-item">
+                    <p><strong>Tim Penyusun Akreditasi Prodi TI UIN Antasari</strong><br>27 May - 02 June 2024</p>
+                    <p>Banjarmasin, Kalimantan Selatan</p>
+                </div>
+            </div>
         </div>
 
         <!-- Education and Skills Card -->
