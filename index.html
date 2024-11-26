@@ -24,19 +24,17 @@
 
         .navbar {
             display: flex;
-            gap: 2px;
-            font-size: 14px;
-            font-weight: ;
-            
-            margin-top: 10px;
-            margin-bottom: 40px; /* Memberikan jarak 15px dari konten utama */
+            gap: 2.5px;
+            font-size: 15px;
+            margin-top: 20px;
+            margin-bottom: 40px;
         }
 
         .navbar a {
             text-decoration: none;
             color: #000;
             transition: color 0.3s;
-            padding: 5px 10px;
+            padding: 5px 8px;
             position: relative;
             border-radius: 10px;
             display: flex;
@@ -45,11 +43,8 @@
         }
 
         .navbar a:hover {
-            color: #555;
-        }
-        .navbar a:hover {
-            background-color: rgba(0, 0, 0, 0.1);
-            color: #333;
+            background-color: #000;
+            color: #fff;
         }
         
         /* Active State */
@@ -57,6 +52,7 @@
             background-color: #000;
             color: #fff;
         }
+        
 
         .container {
             max-width: 800px;
@@ -189,16 +185,45 @@
             background-color: #000;
             color: #fff;
         }
+        @media (max-width: 550px) {
+            .home-section {
+                flex-direction: column;
+                gap: 20px;
+            }
+        
+            .card-left,
+            .card-right {
+                width: 100%;
+            }
+        
+            .card-right h1,
+            .card-right h2 {
+                text-align: center; /* Rata tengah */
+                justify-content: center;
+            }
+            .card-right h1::after {
+               margin: auto;
+            }
+        
+            .buttons {
+                justify-content: center;
+            }
+        
+            .social-icons {
+                justify-content: center; /* Rata tengah */
+            }
+        }
     </style>
 </head>
 <body>
     <nav class="navbar">
-        <a href="index.html">Home</a>
-        <a href="#resume">Resume</a>
-        <a href="#project">Projects</a>
-        <a href="#article">Articles</a>
-        <a href="#bitcoin">Bitcoin</a>
+        <a href="index.html" data-target="home" id="home-link">Home</a>
+        <a href="resume.html" data-target="resume" id="resume-link">Resume</a>
+        <a href="projects.html" data-target="projects" id="projects-link">Projects</a>
+        <a href="articles.html" data-target="articles" id="articles-link">Articles</a>
+        <a href="bitcoin.html" data-target="bitcoin" id="bitcoin-link">Bitcoin</a>
     </nav>
+    
     
     <section class="home-section">
         <div class="card card-left">
@@ -212,35 +237,24 @@
                 I am an undergraduate student at the State Islamic University of Antasari Banjarmasin, majoring in Information Technology. I have a passion for data management and developing AI-based solutions
             </p>
             <div class="buttons">
-                <a href="#" class="button">View Resume</a>
+                <a href="https://drive.google.com/file/d/1rWeuCDl1gkp13njfaaYcCIKgcSCaK8fY/view" class="button">View Resume</a>
                 <a href="#" class="button">Contact Me</a>
                 <div class="social-icons">
-                    <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/mkasplanwar" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.instagram.com/mkasplanwar/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/mkasplanwar/" target="_blank"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
     <script>
-         // JavaScript to handle active menu item
-         document.addEventListener("DOMContentLoaded", () => {
-            const links = document.querySelectorAll(".navbar a");
-            links.forEach(link => {
-                link.addEventListener("click", () => {
-                    // Remove active class from all links
-                    links.forEach(l => l.classList.remove("active"));
-                    // Add active class to the clicked link
-                    link.classList.add("active");
-                });
-            });
-        });
+        
         const professions = [
             "Machine Learning Engineer",
             "Data Scientist",
-            "AI Engineer",
-            "Software Developer"
+            "Student",
+            "Investor"
         ];
 
         let currentProfession = 0;
