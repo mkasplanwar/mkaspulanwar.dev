@@ -54,20 +54,20 @@
         }
 
         .card {
-            display: flex;
             width: 760px;
             background-color: #fff;
             border: 2px solid #000;
             border-radius: 10px;
-            padding: 12px;
+            padding: 20px;
+            display: flex;
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            margin: 0 30px;
+            margin-top: 40px;
         }
 
         .card .left-content {
-            font-size: 12px;
+            font-size: 18px;
         }
 
         .card .right-content {
@@ -93,6 +93,7 @@
         .card button:focus {
             outline: none;
         }
+
         /* New Cards for Experience and Education */
         .cards-container {
             display: flex;
@@ -121,6 +122,34 @@
             line-height: 1.6;
         }
 
+        /* Media Queries for Responsiveness */
+        @media (max-width: 900px) {
+            .card {
+                width: 100%;
+                padding: 15px;
+            }
+
+            .cards-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .experience-card, .education-card {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .experience-card, .education-card {
+                width: 100%;
+                padding: 15px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -134,13 +163,14 @@
 
     <div class="card">
         <div class="left-content">
-            <h1>Download</h1>
+           <h3>Download</h3>
         </div>
         <div class="right-content">
-            <button>Resume.pdf</button>
+            <button>Resume</button>
             <button>Certificates</button>
         </div>
     </div>
+
     <!-- Two new cards below the main card -->
     <div class="cards-container">
         <!-- Experience Card -->
