@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Resume</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">       
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -46,12 +46,81 @@
             background-color: #000;
             color: #fff;
         }
-        
+
         /* Active State */
         .navbar a.active {
             background-color: #000;
             color: #fff;
         }
+
+        .card {
+            display: flex;
+            width: 760px;
+            background-color: #fff;
+            border: 2px solid #000;
+            border-radius: 10px;
+            padding: 12px;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 0 30px;
+        }
+
+        .card .left-content {
+            font-size: 12px;
+        }
+
+        .card .right-content {
+            display: flex;
+            gap: 15px;
+        }
+
+        .card button {
+            background-color: white;
+            border: 2px solid black;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .card button:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .card button:focus {
+            outline: none;
+        }
+        /* New Cards for Experience and Education */
+        .cards-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 40px;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .experience-card, .education-card {
+            width: 375px;
+            background-color: #fff;
+            border: 2px solid #000;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .experience-card h3, .education-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .experience-card p, .education-card p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
     </style>
 </head>
 <body>
@@ -62,6 +131,38 @@
         <a href="articles.html" data-target="articles" id="articles-link">Articles</a>
         <a href="bitcoin.html" data-target="bitcoin" id="bitcoin-link">Bitcoin</a>
     </nav>
+
+    <div class="card">
+        <div class="left-content">
+            <h1>Download</h1>
+        </div>
+        <div class="right-content">
+            <button>Resume.pdf</button>
+            <button>Certificates</button>
+        </div>
+    </div>
+    <!-- Two new cards below the main card -->
+    <div class="cards-container">
+        <!-- Experience Card -->
+        <div class="experience-card">
+            <h3>Experience</h3>
+            <p><strong>Job Title 1</strong><br>Company Name - Year</p>
+            <p>Brief description of the responsibilities and accomplishments in this position.</p>
+
+            <p><strong>Job Title 2</strong><br>Company Name - Year</p>
+            <p>Brief description of the responsibilities and accomplishments in this position.</p>
+        </div>
+
+        <!-- Education and Skills Card -->
+        <div class="education-card">
+            <h3>Education and Skills</h3>
+            <p><strong>Degree</strong><br>University Name - Year</p>
+            <p>Brief description of your educational background.</p>
+
+            <p><strong>Skills</strong><br>Skill 1, Skill 2, Skill 3, Skill 4</p>
+        </div>
+    </div>
+
     <br>
     <br>
     <p>HALAMAN MASIH DI CODING SAMA M. KASPUL ANWAR</p>
