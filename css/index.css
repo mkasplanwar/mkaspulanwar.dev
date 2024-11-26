@@ -112,7 +112,7 @@
         .card-right h2 {
             font-size: 18px;
             color: #000;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             margin-top: 15px;
             display: flex;
             align-items: center;
@@ -160,7 +160,7 @@
         }
 
         .social-icons a {
-            font-size: 20px;
+            font-size: 23px;
             color: #000;
             text-decoration: none;
             display: flex;
