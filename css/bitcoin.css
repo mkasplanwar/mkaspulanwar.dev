@@ -120,6 +120,10 @@
             font-weight: bold;
         }
 
+        .info-btc{
+            font-weight: bold;
+        }
+
         .card-left .qr-code-wrapper .details-wrapper .info {
             font-size: 14px;
             line-height: 1.5;
