@@ -150,13 +150,13 @@
 
         .card-right .balance .balance-title {
             font-size: 16px;
-            margin-bottom: 10px;
+            margin-bottom: 16px;
             font-weight: bold;
             color: #555;
         }
 
         .card-right .balance .balance-amount {
-            font-size: 24px;
+            font-size: 28px;
             font-weight: bold;
             color: #000;
         }
@@ -168,8 +168,9 @@
         }
 
         .card-right .balance .balance-sats {
-            font-size: 18px;
+            font-size: 14px;
             color: #777;
+            margin-top: 10px;
         }
 
         .card-right .buttons {
