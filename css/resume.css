@@ -256,6 +256,7 @@
             gap: px;
             justify-content: center; /* Rata kiri pada mode desktop */
             padding: 10px;
+            padding-top: 0px;
         }
         .skill {
             text-align: center;
