@@ -6,220 +6,7 @@
     <title>My Resume</title>
     <link rel="icon" href="https://i.pinimg.com/originals/e5/06/cf/e506cfcd9f85b11eefd590f871db9784.png" sizes="32x32" type="image/png" >
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-
-        body {
-            background: #f9f9f9;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .navbar {
-            display: flex;
-            gap: 2.5px;
-            font-size: 15px;
-            margin-top: 20px;
-            margin-bottom: 40px;
-        }
-
-        .navbar a {
-            text-decoration: none;
-            color: #000;
-            transition: color 0.3s;
-            padding: 5px 8px;
-            position: relative;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            transition: all 0.3s ease;
-        }
-
-        .navbar a:hover {
-            background-color: #000;
-            color: #fff;
-        }
-
-        /* Active State */
-        .navbar a.active {
-            background-color: #000;
-            color: #fff;
-        }
-
-        .card {
-            width: 760px;
-            background-color: #fff;
-            border: 2px solid #000;
-            border-radius: 10px;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            
-        }
-
-        .card .left-content {
-            font-size: 18px;
-        }
-
-        .card .right-content {
-            display: flex;
-            gap: 10px;
-        }
-
-        .card  a{
-            background-color: white;
-            border: 2px solid black;
-            border-radius: 8px;
-            padding: 10px 10px;
-            font-size: 14px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            color: #000;
-        }
-
-        .card a:hover {
-            background-color: black;
-            color: white;
-        }
-
-        .card a:focus {
-            outline: none;
-        }
-
-        /* New Cards for Experience and Education */
-        .cards-container {
-            display: flex;
-            gap: 10px;
-            margin-top: 20px;
-            width: 100%;
-            justify-content: center;
-        }
-
-        .experience-card, .education-card {
-            width: 375px;
-            background-color: #fff;
-            border: 2px solid #000;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .experience-card h3, .education-card h3 {
-            font-size: 20px;
-            margin-bottom: 20px;
-            /*text-decoration:underline;*/
-        }
-
-        .experience-card p, .education-card p {
-            font-size: 16px;
-            line-height: 1.6;
-        }
-        .experience-card .company-info {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-        .experience-card .company-info .circle {
-            width: 50px;
-            height: 50px;
-            background-color: white;
-            border-radius: 50%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden; /* Prevent content overflow */
-            flex-shrink: 0; /* Prevent shrinking */
-        }
-        
-
-        .experience-card .company-info img {
-            width: 35px;
-            height: 35px;
-            object-fit: contain;
-        }
-
-        .experience-card .company-info span {
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-        /* Experience items and their lines */
-        .experience-card .experience-items {
-            position: relative;
-            padding-left: 30px; /* Increase space to the right of the dot */
-            margin-bottom: 15px;
-        }
-
-        .experience-card .experience-item {
-            position: relative;
-            margin-bottom: px;
-            padding-left: 30px; /* Add more spacing between dot and title */
-        }
-        .education{
-            padding-left: 60px;
-            margin-top: -25px;
-        }
-        .experience-card .experience-item strong{
-            font-size: 16px;
-         }
-        .experience-card .experience-item p{
-           font-size: 14px;
-        }
-
-        /* Dot position */
-        .experience-card .experience-item:before {
-            content: '';
-            position: absolute;
-            left: -10px; /* Increase space between dot and text */
-            top: 7px;
-            width: 8px;
-            height: 8px;
-            background-color: #727272;
-            border-radius: 50%;
-        }
-
-        /* Media Queries for Responsiveness */
-        @media (max-width: 900px) {
-            .card {
-                width: 100%;
-                padding: 15px;
-            }
-
-            .cards-container {
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            .experience-card, .education-card {
-                width: 100%;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .card {
-                width: 100%;
-                padding: 10px;
-            }
-
-            .experience-card, .education-card {
-                width: 100%;
-                padding: 15px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/resume.css">
 </head>
 <body>
     <nav class="navbar">
@@ -242,6 +29,39 @@
 
     <!-- Two new cards below the main card -->
     <div class="cards-container">
+        <!-- Education and Skills Card -->
+        <div class="education-card">
+            <h3>Education</h3>
+            <div class="company-info">
+                <div class="circle">
+                    <img src="https://assets.nsd.co.id/images/kampus/logo/UIN_Antasari_2edit22.png" alt="UIN Antasari Logo">
+                </div>
+                <span>Universitas Islam Negeri Antasari Banjarmasin</span>
+            </div>
+            <p class="keterangan">04 September 2023 - Sekarang [Di Lokasi]
+                <br> Program Studi Sarjana (S1) Teknologi Informasi 
+                <br>IPK 3.91 / 4.0
+            </p>
+            <div class="company-info">
+                <div class="circle">
+                    <img src="https://ugc.production.linktr.ee/d3cQv9tQuG9rfiv2Xx7Q_N0s1vwgo0nYV6pr1" alt="AMZ">
+                </div>
+                <span>Al Mazaya Islamic Senior High School</span>
+            </div>
+            <p class="keterangan">Juli 2018 - Mei 2021 [Di Lokasi] 
+                <br>Jurusan IPA - IPK 3.80 / 4.0
+            </p>
+            <div class="company-info">
+                <div class="circle">
+                    <img src="https://ugc.production.linktr.ee/d3cQv9tQuG9rfiv2Xx7Q_N0s1vwgo0nYV6pr1" alt="AMZ">
+                </div>
+                <span>Al Mazaya Islamic Junior High School</span>
+            </div>
+            <p class="keterangan">Juli 2015 - Mei 2018 [Di Lokasi] 
+                <br>Jurusan IPA - IPK 3.40 / 4.0
+            </p>
+        </div>
+        
         <!-- Experience Card -->
         <div class="experience-card">
             <h3>Experience</h3>
@@ -403,24 +223,7 @@
             </div>
         </div>
 
-        <!-- Education and Skills Card -->
-        <div class="experience-card">
-            <h3>Education</h3>
-            <div class="company-info">
-                <div class="circle">
-                    <img src="https://assets.nsd.co.id/images/kampus/logo/UIN_Antasari_2edit22.png" alt="UIN Antasari Logo">
-                </div>
-                <span>Universitas Islam Negeri Antasari Banjarmasin</span>
-            </div>
-            <p class="education">Program Studi Sarjana Teknologi Informasi</p>
         
-            <h3>Education and Skills</h3>
-            
-            <p><strong>Degree</strong><br>University Name - Year</p>
-            <p>Brief description of your educational background.</p>
-
-            <p><strong>Skills</strong><br>Skill 1, Skill 2, Skill 3, Skill 4</p>
-        </div>
     </div>
 </body>
 </html>
