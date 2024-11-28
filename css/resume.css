@@ -267,18 +267,23 @@
             padding: 5px 8px;
             border-radius: 8px;
             color: rgb(0, 0, 0);
-            flex-basis: 120px; /* Setiap skill memiliki lebar tetap */
+            flex-basis: 145px; /* Setiap skill memiliki lebar tetap */
             margin: 5px;
             border: 1.5px solid black;
             transition: background-color 0.3s ease, transform 0.3s ease;
+
         }
         .skill .logo {
             font-size: 25px;
             color: inherit; /* Mengikuti warna teks */
             transition: transform 0.3s ease; /* Transisi untuk ikon */
         }
+        .skill img{
+            height: 25px;
+            transition: transform 0.3s ease; /* Transisi untuk ikon */
+        }
         .skill:hover {
-            background-color: #f0f0f0; /* Latar abu-abu terang saat hover */
+            background-color: #fff; /* Latar abu-abu terang saat hover */
             transform: scale(1.05); /* Membesar sedikit */
         }
         .html .logo { color: #E44D26; }
@@ -298,6 +303,9 @@
         .skill:hover .logo {
             transform: scale(1.2); /* Ikon membesar saat hover */
         }
+        .skill:hover img {
+            transform: scale(1.2); /* Ikon membesar saat hover */
+        }
 
         /* Media query untuk mode mobile */
         @media (max-width: 768px) {
@@ -306,6 +314,6 @@
             }
 
             .skill {
-                flex-basis: 120px; /* Mengurangi lebar skill pada layar kecil */
+                flex-basis: 150px; /* Mengurangi lebar skill pada layar kecil */
             }
         }
