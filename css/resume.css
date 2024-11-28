@@ -217,7 +217,7 @@
             background-color: #727272;
             border-radius: 50%;
         }
-
+        
         
 
         /* Media Queries for Responsiveness */
@@ -246,5 +246,54 @@
             .experience-card, .education-card {
                 width: 100%;
                 padding: 15px;
+            }
+        }
+
+/* Bagian Programming Skill */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: px;
+            justify-content: center; /* Rata kiri pada mode desktop */
+            padding: 10px;
+        }
+        .skill {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            padding: 5px 8px;
+            border-radius: 8px;
+            color: white;
+            flex-basis: 120px; /* Setiap skill memiliki lebar tetap */
+            margin: 5px;
+        }
+        .html { background-color: #E44D26; }
+        .css { background-color: #1572B6; }
+        .javascript { background-color: #F7DF1E; }
+        .nodejs { background-color: #8CC84B; }
+        .python { background-color: #3776AB; }
+        .php { background-color: #8C5B9F; }
+
+         .logo {
+            font-size: 25px;
+        }
+
+        .skill p {
+            font-size: 12px;
+            margin: 0;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        /* Media query untuk mode mobile */
+        @media (max-width: 768px) {
+            .skills-container {
+                justify-content: center; /* Rata tengah pada mode mobile */
+            }
+
+            .skill {
+                flex-basis: 120px; /* Mengurangi lebar skill pada layar kecil */
             }
         }

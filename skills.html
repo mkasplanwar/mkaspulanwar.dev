@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Skills</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: px;
+            justify-content: flex-start; /* Rata kiri pada mode desktop */
+            padding: 10px;
+        }
+
+        .skill {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            padding: 5px 8px;
+            border-radius: 8px;
+            color: white;
+            flex-basis: 100px; /* Setiap skill memiliki lebar tetap */
+            margin: 5px;
+        }
+
+        .html { background-color: #E44D26; }
+        .css { background-color: #1572B6; }
+        .javascript { background-color: #F7DF1E; }
+        .nodejs { background-color: #8CC84B; }
+        .python { background-color: #3776AB; }
+        .php { background-color: #8C5B9F; }
+
+        .logo {
+            font-size: 25px;
+        }
+
+        p {
+            font-size: 12px;
+            margin: 0;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        /* Media query untuk mode mobile */
+        @media (max-width: 768px) {
+            .skills-container {
+                justify-content: center; /* Rata tengah pada mode mobile */
+            }
+
+            .skill {
+                flex-basis: 120px; /* Mengurangi lebar skill pada layar kecil */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="skills-container">
+        <div class="skill html">
+            <div class="logo"><i class="fab fa-html5"></i></div>
+            <p>HTML5</p>
+        </div>
+        <div class="skill css">
+            <div class="logo"><i class="fab fa-css3-alt"></i></div>
+            <p>CSS3</p>
+        </div>
+        <div class="skill javascript">
+            <div class="logo"><i class="fab fa-js"></i></div>
+            <p>JavaScript</p>
+        </div>
+        <div class="skill nodejs">
+            <div class="logo"><i class="fab fa-node-js"></i></div>
+            <p>Node.js</p>
+        </div>
+        <div class="skill python">
+            <div class="logo"><i class="fab fa-python"></i></div>
+            <p>Python</p>
+        </div>
+        <div class="skill php">
+            <div class="logo"><i class="fab fa-php"></i></div>
+            <p>PHP</p>
+        </div>
+        
+    </div>
+
+</body>
+</html>
