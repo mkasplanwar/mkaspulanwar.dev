@@ -266,20 +266,23 @@
             gap: 5px;
             padding: 5px 8px;
             border-radius: 8px;
-            color: white;
+            color: rgb(0, 0, 0);
             flex-basis: 120px; /* Setiap skill memiliki lebar tetap */
             margin: 5px;
+            border: 1.5px solid black;
         }
-        .html { background-color: #E44D26; }
-        .css { background-color: #1572B6; }
-        .javascript { background-color: #F7DF1E; }
-        .nodejs { background-color: #8CC84B; }
-        .python { background-color: #3776AB; }
-        .php { background-color: #8C5B9F; }
-
-         .logo {
+        .logo {
             font-size: 25px;
+            color: inherit; /* Mengikuti warna teks */
         }
+        .html .logo { color: #E44D26; }
+        .css .logo { color: #1572B6; }
+        .javascript .logo { color: #F7DF1E; }
+        .nodejs .logo { color: #8CC84B; }
+        .python .logo { color: #3776AB; }
+        .php .logo { color: #8C5B9F; }
+
+        
 
         .skill p {
             font-size: 12px;
