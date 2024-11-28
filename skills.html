@@ -34,11 +34,22 @@
             flex-basis: 100px; /* Setiap skill memiliki lebar tetap */
             margin: 5px;
             color: black; /* Warna teks menjadi hitam */
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .skill:hover {
+            background-color: #f0f0f0; /* Latar abu-abu terang saat hover */
+            transform: scale(1.05); /* Membesar sedikit */
         }
 
         .logo {
             font-size: 25px;
             color: inherit; /* Mengikuti warna teks */
+            transition: transform 0.3s ease; /* Transisi untuk ikon */
+        }
+
+        .skill:hover .logo {
+            transform: scale(1.2); /* Ikon membesar saat hover */
         }
 
         .html .logo { color: #E44D26; }
