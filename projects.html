@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Projects</title>
-    <link rel="icon" href="https://i.pinimg.com/originals/e5/06/cf/e506cfcd9f85b11eefd590f871db9784.png" sizes="32x32" type="image/png" >
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">       
+    <title>Error</title>
+    <link rel="icon" href="https://cdn.pixabay.com/photo/2021/04/30/16/47/bitcoin-logo-6219385_960_720.png" type="image/png">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
         }
 
         body {
@@ -21,10 +20,13 @@
             flex-direction: column;
             align-items: center;
             padding: 20px;
+            min-height: 100vh;
+            margin: 0;
         }
 
         .navbar {
             display: flex;
+            justify-content: center;
             gap: 2.5px;
             font-size: 15px;
             margin-top: 20px;
@@ -47,15 +49,70 @@
             background-color: #000;
             color: #fff;
         }
-        
-        /* Active State */
+
         .navbar a.active {
             background-color: #000;
             color: #fff;
         }
+
+        .error-container {
+            text-align: center;
+            padding: 40px;
+            border-radius: 15px;
+            background: #fff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin-top: 30px;
+            position: relative;
+        }
+
+        /* Circle with icon inside */
+        .error-container::before {
+            content: "!";
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 80px;
+            background: #f44336;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            color: white;
+        }
+
+        .error-container h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .error-container p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        .error-container a {
+            text-decoration: none;
+            color: #fff;
+            background: #f44336;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .error-container a:hover {
+            background: #e53935;
+        }
     </style>
 </head>
 <body>
+
     <nav class="navbar">
         <a href="index.html" data-target="home" id="home-link">Home</a>
         <a href="resume.html" data-target="resume" id="resume-link">Resume</a>
@@ -63,11 +120,12 @@
         <a href="articles.html" data-target="articles" id="articles-link">Articles</a>
         <a href="bitcoin.html" data-target="bitcoin" id="bitcoin-link">Bitcoin</a>
     </nav>
-    <br>
-    <br>
-    <p>HALAMAN MASIH DI CODING SAMA M. KASPUL ANWAR</p>
-    <br>
-    <br>
-    <P>TUNGGU YA SAYA MASIH MAKAN</P>
+
+    <div class="error-container">
+        <h1>Oops, Something Went Wrong!</h1>
+        <p>Hubungi anwar untuk menyelesaikan kodingannya.</p>
+        <a href="index.html">Kembali ke Home</a>
+    </div>
+
 </body>
 </html>

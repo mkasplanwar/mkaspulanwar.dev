@@ -314,6 +314,6 @@
             }
 
             .skill {
-                flex-basis: 150px; /* Mengurangi lebar skill pada layar kecil */
+                flex-basis: 120px; /* Mengurangi lebar skill pada layar kecil */
             }
         }
