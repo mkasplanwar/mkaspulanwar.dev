@@ -1,4 +1,4 @@
-
+/* BAGIAN SEMUANYA */
         * {
             margin: 0;
             padding: 0;
@@ -14,7 +14,7 @@
             align-items: center;
             padding: 20px;
         }
-
+/* BAGIAN NAVBAR */
         .navbar {
             display: flex;
             gap: 2.5px;
@@ -45,8 +45,8 @@
             background-color: #000;
             color: #fff;
         }
-
-        .card {
+/* UNTUK BAGIAN DOWNLOAD */
+        .card-download{
             width: 760px;
             background-color: #fff;
             border: 2px solid #000;
@@ -59,16 +59,16 @@
             
         }
 
-        .card .left-content {
+        .card-download .left-content {
             font-size: 18px;
         }
 
-        .card .right-content {
+        .card-download .right-content {
             display: flex;
             gap: 10px;
         }
 
-        .card  a{
+        .card-download  a{
             background-color: white;
             border: 2px solid black;
             border-radius: 8px;
@@ -80,17 +80,17 @@
             color: #000;
         }
 
-        .card a:hover {
+        .card-download a:hover {
             background-color: black;
             color: white;
         }
 
-        .card a:focus {
+        .card-download a:focus {
             outline: none;
         }
 
-        /* New Cards for Experience and Education */
-        .cards-container {
+/* BAGIAN 2 CARD RESUME */
+        .resume-container {
             display: flex;
             gap: 10px;
             margin-top: 20px;
@@ -98,7 +98,7 @@
             justify-content: center;
         }
 
-        .experience-card, .education-card {
+        .kiri-card, .kanan-card {
             width: 375px;
             background-color: #fff;
             border: 2px solid #000;
@@ -107,149 +107,46 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
-        .experience-card h3, .education-card h3 {
+        .kiri-card h3, .kanan-card h3 {
             font-size: 20px;
             margin-bottom: 20px;
-            /*text-decoration:underline;*/
         }
-
-        .experience-card p, .education-card p {
-            font-size: 16px;
-            line-height: 1.6;
-        }
-        .experience-card .company-info {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-        .experience-card .company-info .circle {
-            width: 50px;
-            height: 50px;
-            background-color: white;
-            border-radius: 50%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden; /* Prevent content overflow */
-            flex-shrink: 0; /* Prevent shrinking */
-        }
-
-        .education-card .company-info {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 20px;
-        }
-
-        .education-card .company-info .circle {
-            width: 50px;
-            height: 50px;
-            background-color: white;
-            border-radius: 50%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden; /* Prevent content overflow */
-            flex-shrink: 0; /* Prevent shrinking */
-        }
-        .education-card .company-info img {
-            width: 35px;
-            height: 35px;
-            object-fit: contain;
-        }
-        .education-card .company-info span {
-            font-size: 16px;
-            font-weight: bold;
-        }
-        .education-card .experience-items {
-            position: relative;
-            padding-left: 30px; /* Increase space to the right of the dot */
-            margin-bottom: 15px;
-        }
-
-        .experience-card .company-info img {
-            width: 35px;
-            height: 35px;
-            object-fit: contain;
-        }
-
-        .experience-card .company-info span {
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-        /* Experience items and their lines */
-        .experience-card .experience-items {
-            position: relative;
-            padding-left: 30px; /* Increase space to the right of the dot */
-            margin-bottom: 15px;
-        }
-
-        .experience-card .experience-item {
-            position: relative;
-            margin-bottom: px;
-            padding-left: 30px; /* Add more spacing between dot and title */
-        }
-        .education-card .keterangan{
+        .kiri-card .keterangan, .kanan-card .keterangan{
+            font-size: 12px;
             padding-left: 60px;
             margin-top: -25px;
-            font-size: 12px;
-            
+            text-align: justify;
         }
-        .experience-card .experience-item strong{
-            font-size: 16px;
-         }
-        .experience-card .experience-item p{
-           font-size: 14px;
+        .company-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
         }
-
-        /* Dot position */
-        .experience-card .experience-item:before {
-            content: '';
-            position: absolute;
-            left: -10px; /* Increase space between dot and text */
-            top: 7px;
-            width: 8px;
-            height: 8px;
-            background-color: #727272;
+        .company-info .circle {
+            width: 50px;
+            height: 50px;
+            background-color: white;
             border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Prevent content overflow */
+            flex-shrink: 0; /* Prevent shrinking */
         }
-        
-        
-
-        /* Media Queries for Responsiveness */
-        @media (max-width: 900px) {
-            .card {
-                width: 100%;
-                padding: 15px;
-            }
-
-            .cards-container {
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            .experience-card, .education-card {
-                width: 100%;
-            }
+        .company-info img {
+            width: 35px;
+            height: 35px;
+            object-fit: contain;
+        }
+        .company-info span {
+            font-size: 16px;
+            font-weight: bold;
         }
 
-        @media (max-width: 600px) {
-            .card {
-                width: 100%;
-                padding: 10px;
-            }
-
-            .experience-card, .education-card {
-                width: 100%;
-                padding: 15px;
-            }
-        }
-
-/* Bagian Programming Skill */
+/* KIRI CARD */
+        /* Bagian Programming Skill */
         .skills-container {
             display: flex;
             flex-wrap: wrap;
@@ -317,3 +214,34 @@
                 flex-basis: 120px; /* Mengurangi lebar skill pada layar kecil */
             }
         }
+
+/* RESPONSIFITAS 3 KARTU */
+        /* Media Queries for Responsiveness */
+        @media (max-width: 900px) {
+            .card-download{
+                width: 100%;
+                padding: 15px;
+            }
+
+            .resume-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .experience-card, .kiri-card {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .card-download {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .kanan-card, .kiri-card {
+                width: 100%;
+                padding: 15px;
+            }
+        }
+
